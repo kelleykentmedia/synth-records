@@ -1,0 +1,11 @@
+footer {
+    width: 100vw;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0 16px 0;
+    overflow: hidden;
+    background: linear-gradient(0deg, rgba(241,150,186,1) 0%, rgba(255,255,255,1) 100%);
+}

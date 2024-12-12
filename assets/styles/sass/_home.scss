@@ -1,0 +1,236 @@
+.home {
+
+    section {
+        position: relative;
+
+        &.section1 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            img {
+                width: 100%;
+                z-index: -1;
+            }
+            article {
+                position: absolute;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                align-items: center;
+
+                p {
+                    color: white;
+                }
+                a {
+                    margin-bottom: 80px;  
+                }
+            }
+        }
+        &.section2 {
+            position: relative;
+            padding-top: 64px;
+
+            h2 {
+                text-align: center;
+                font-size: 48px;
+            }
+            div {
+                @extend %grid;
+
+                article {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;                
+    
+                    img {
+                        width: 100%;
+                        border-radius: 8px;
+                    }
+                    .bold {
+                        font-size: 24px;
+                        font-weight: bold;
+                        margin: 0;
+                        padding-top: 8px;
+                    }
+                    p {
+                        font-size: 16px;
+                        margin: 0;
+                    }
+                }
+                .track1 {
+                    grid-column: 1 / 5;
+                }
+                .track2 {
+                    grid-column: 5 / 9;
+                }
+                .track3 {
+                    grid-column: 9 / 13;
+                }
+            }
+        }
+        &.section3 {
+            position: relative;
+            padding-top: 64px;
+
+            h2 {
+                text-align: center;
+            }
+            div {
+                @extend %grid;
+                gap: 80px;
+
+                article {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;                
+    
+                    > div {
+                        position: relative;
+                        height: 100%;
+                        width: 100%;
+                        padding: 0;
+                        aspect-ratio: 1 / 1;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        overflow: hidden;
+                        border-radius: 1000px;
+
+                        img {
+                            position: absolute;
+                            height: 100%;
+                        }
+                    }
+                    .bold {
+                        font-size: 14px;
+                        font-weight: bold;
+                        margin: 0;
+                        padding-top: 8px;
+                    }
+                    .light {
+                        font-size: 14px;
+                        font-weight: normal;
+                        margin: 0;
+                    }
+                    p {
+                        font-size: 14px;
+                        font-weight: lighter;
+                        margin: 0;
+                    }
+                }
+                .event1 {
+                    grid-column: 1 / 4;
+                }
+                .event2 {
+                    grid-column: 4 / 7;
+                }
+                .event3 {
+                    grid-column: 7 / 10;
+                }
+                .event4 {
+                    grid-column: 10 / 13;
+                }
+            }
+        }
+        &.section4 {
+            @extend %grid;
+            padding-top: 64px;
+
+            div {
+                position: relative;
+                height: 100%;
+                width: 100%;
+                grid-column: 1 / 5;
+                padding: 0;
+                aspect-ratio: 3 / 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                border-radius: 8px;
+
+                img {
+                    position: absolute;
+                    height: 100%;
+                }
+            }
+            article {
+                grid-column: 5 / 13;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+            }
+        }
+        &.section5 {
+            @extend %grid;
+            padding-top: 64px;
+            display: flex;
+            flex-direction: column;
+
+            > article {
+                grid-column: 1 / 13;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                h2 {
+                    margin-bottom: 0;
+                }
+                p {
+                    font-weight: bold;
+                }
+            }
+            .artist-cont {
+                grid-column: 1 / 13;
+                @extend %grid;
+                padding: 0;
+
+                article {
+                    display: flex;
+                    flex-direction: column;
+
+                    div {
+                        position: relative;
+                        width: 100%;
+                        padding: 0;
+                        aspect-ratio: 1 / 1;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        overflow: hidden;
+                        border-radius: 8px;
+
+                        img {
+                            position: absolute;
+                            width: 100%;
+                        }
+                    }
+                    p {
+                        font-weight: bold;
+                        text-align: center;
+                    }
+                    &.artist1 {
+                        grid-column: 1 / 4;
+                    }
+                    &.artist2 {
+                        grid-column: 4 / 7;
+                    }
+                    &.artist3 {
+                        grid-column: 7 / 10;
+                    }
+                    &.artist4 {
+                        grid-column: 10 / 13;
+                    }
+                }
+            }
+        }
+    }
+}
